@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porfolio</title>
-    <link rel="stylesheet" href="resources/css/styles.css">
     <link rel="stylesheet" href="vendors/css/normalize.css">
     <link rel="stylesheet" href="vendors/css/grid.css">
+    <link rel="stylesheet" href="resources/css/styles.css">
+    
+    
 </head>
 <body>
     <header>
-        <div class="row">
+        <nav>
+            <div class="row">
                 <img class="logo" src="resources/img/icon.png" alt="Portfolio Logo">
                 <ul class="main-nav">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Resume</a></li>
@@ -28,8 +31,92 @@
             <a href="#" class="btn btn-ghost">Resume</a>
         </div>
     </header>
-    <main></main>
+    <main>
+        <section class="section-features" id="about">
+        <div class="row">
+            <h2>About Me</h2>
+            <div class="row">
+                <div class="col span_1_of_2 box">
+                    <img src="https://static.vecteezy.com/system/resources/previews/011/490/381/original/happy-smiling-young-man-avatar-3d-portrait-of-a-man-cartoon-character-people-illustration-isolated-on-white-background-vector.jpg" alt="Anand's Photo" class="profile-photo">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col span_1_of_2 box">
+                    <p class="long-copy">
+                        Hi, I'm Anand, a passionate front-end developer who loves crafting clean, responsive, and user-friendly web interfaces. 
+                        I enjoy turning designs into reality using HTML, CSS, JavaScript, and modern frameworks like React.
+                        <br>
+                        <br> Let's build something beautiful together!
+                    </p>
+                    <br>
+                    <div class="icon-container">
+                    <ion-icon class="icon-big icn-html" name="logo-html5"></ion-icon>
+                    <ion-icon class="icon-big icn-css" name="logo-css3"></ion-icon>
+                    <ion-icon class="icon-big icn-js" name="logo-javascript"></ion-icon>
+                    <br>
+                    <ion-icon class="icon-big icn-rt" name="logo-react"></ion-icon>
+                    <ion-icon class="icon-big icn-gh" name="logo-github"></ion-icon>
+                    <ion-icon class="icon-big icn-lk" name="logo-linkedin"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-folio" data-aos="fade-in" data-aos-duration="2000">
+        <div class="row">
+            <h2>My Portfolio</h2>
+        <ul class="folio-showcase">
+            <li>
+                <figure class="folio-photo">
+                    <img src="resources/img/1.png" alt="Work 1">
+                </figure>
+            </li>
+            <li>
+                <figure class="folio-photo">
+                    <img src="resources/img/2.png" alt="Work 1">
+                </figure>
+            </li>
+            <li>
+                <figure class="folio-photo">
+                    <img src="resources/img/3.png" alt="Work 1">
+                </figure>
+            </li>
+            <li>
+                <figure class="folio-photo">
+                    <img src="resources/img/4.png" alt="Work 1">
+                </figure>
+            </li>
+        </ul>
+        <ul class="folio-showcase">
+            <li>
+                <figure class="folio-photo">
+                    <img src="resources/img/5.png" alt="Work 1">
+                </figure>
+            </li>
+            <li>
+                <figure class="folio-photo">
+                    <img src="resources/img/6.png" alt="Work 1">
+                </figure>
+            </li>
+            <li>
+                <figure class="folio-photo">
+                    <img src="resources/img/7.png" alt="Work 1">
+                </figure>
+            </li>
+            <li>
+                <figure class="folio-photo">
+                    <img src="resources/img/8.png" alt="Work 1">
+                </figure>
+            </li>
+        </ul>
+    </section>
+
+
+
+
+    </main>
     <footer></footer>
-    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
