@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="vendors/css/normalize.css">
     <link rel="stylesheet" href="vendors/css/grid.css">
     <link rel="stylesheet" href="resources/css/styles.css">
-    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
 </head>
 <body>
@@ -18,21 +18,19 @@
                 <ul class="main-nav">
                     <li><a href="#">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Resume</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#folio">Portfolio</a></li>
+                    <li><a href="#signup">Contact</a></li>
                 </ul>
             </div>
         </nav>
         <div class="hero-text-box">
             <h1>Hi! I'm Anand<br> A Front-end Developer</h1>
-            <a href="#" class="btn btn-full">Connect With Me!</a>
-            <a href="#" class="btn btn-ghost">Resume</a>
+            <a href="#signup" class="btn btn-full">Connect With Me!</a>
+            <a href="#signup" class="btn btn-ghost">Resume</a>
         </div>
     </header>
     <main>
-        <section class="section-features" id="about">
+    <section class="section-features" id="about" data-aos="fade-in" data-aos-duration="2000">
         <div class="row">
             <h2>About Me</h2>
             <div class="row">
@@ -62,7 +60,7 @@
             </div>
         </div>
     </section>
-    <section class="section-folio" data-aos="fade-in" data-aos-duration="2000">
+    <section class="section-folio" id="folio" data-aos="fade-in" data-aos-duration="2000">
         <div class="row">
             <h2>My Portfolio</h2>
         <ul class="folio-showcase">
@@ -110,13 +108,113 @@
             </li>
         </ul>
     </section>
-
-
-
-
+    <section class="section-form" id="signup" data-aos="fade-in" data-aos-duration="2000">
+        <div class="row">
+            <h2>Please Connect with me</h2>
+        </div>
+        <div class="row">
+            <form action="#" method="POST" class="contact-form">
+                <div class="row">
+                    <div class="col span_1_of_3">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="col span_2_of_3">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span_1_of_3">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="col span_2_of_3">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span_1_of_3">
+                        <label for="find-us">How did you find Me?</label>
+                    </div>
+                    <div class="col span_2_of_3">
+                        <select name="find-us" id="find-us">
+                            <option value="google">Google</option>
+                            <option value="facebook">Facebook</option>
+                            <option value="friend">Friend</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span_1_of_3">
+                        <label for="message">Drop a line</label>
+                    </div>
+                    <div class="col span_2_of_3">
+                        <textarea id="message" name="message" rows="10" cols="30" placeholder="Your Message"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span_1_of_3">
+                        <label>&nbsp;</label>
+                    </div>
+                    <div class="col span_2_of_3">
+                        <input type="submit" value="Send-me" class="btn btn-full"></input>
+                    </div>
+            </form>
+        </div>
+    </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="row">
+            <div class="col span_1_of_2">
+                <ul class="footer-nav">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#folio">Portfolio</a></li>
+                    <li><a href="#signup">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col span_1_of_2">
+                <ul class="social-links">
+                    <li><a href="#"><ion-icon class="fb" name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="#"><ion-icon class="twitter" name="logo-twitter"></ion-icon></a></li>
+                    <li><a href="#"><ion-icon class="insta" name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="#"><ion-icon class="linkedin" name="logo-linkedin"></ion-icon></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <p>Copyright &copy; 2025 by Anand. All rights reserved.</p>
+        </div>
+    </footer>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 800, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+        });
+        } // End if
+        });
+        });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
